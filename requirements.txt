@@ -5,7 +5,7 @@ matplotlib==3.1.1
 nltk==3.4.5
 Flask==1.1.1
 scipy==1.2.1
-git+https://github.com/timClicks/slate
+git+https://github.com/timClicks/slate.git
 interruptingcow==0.8
 tqdm==4.34.0
 torch==1.2.0
