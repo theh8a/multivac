@@ -1,5 +1,5 @@
 # use ubuntu as the base image; install R and Python on top
-FROM ubuntu:xenial
+FROM ubuntu:latest
 
 # avoid humna input for geography and stuff
 ENV DEBIAN_FRONTEND=noninteractive
