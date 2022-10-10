@@ -18,7 +18,7 @@ RUN pip3 install wheel --no-cache-dir
 RUN pip3 install setuptools --no-cache-dir
 
 # env setup
-RUN pip3 install torch==1.2.0 --no-cache-dir
+RUN pip3 install torch==1.4.0 --no-cache-dir
 RUN pip3 install -r requirements.txt --no-cache-dir
 
 RUN git clone https://github.com/thunlp/OpenKE && cd OpenKE && git checkout master && sh make.sh
