@@ -1,11 +1,11 @@
 # use ubuntu as the base image; install R and Python on top
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 # avoid humna input for geography and stuff
 ENV DEBIAN_FRONTEND=noninteractive
 
-# install R and python  --no-install-recommends
-RUN apt-get update && apt-get install -y build-essential r-base python3.7 python3-pip python3-setuptools python3-dev git
+# install R and python  
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential r-base python3.7 python3-pip python3-setuptools python3-dev git
 
 # copy requirements over to application
 COPY requirements.txt /multivac/requirements.txt
