@@ -13,13 +13,13 @@ COPY requirements.txt /multivac/requirements.txt
 WORKDIR /multivac
 
 # set up bdist_wheel
-RUN pip3 install wheel --no-cache-dir
+RUN pip3 install wheel --no-cache-dir -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
-RUN pip3 install setuptools --no-cache-dir
+RUN pip3 install setuptools --no-cache-dir -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
 # env setup
-RUN pip3 install torch==1.2.0 --no-cache-dir
-RUN pip3 install -r requirements.txt --no-cache-dir
+RUN pip3 install torch==1.2.0 --no-cache-dir -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+RUN pip3 install -r requirements.txt --no-cache-dir -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
 RUN git clone https://github.com/thunlp/OpenKE && cd OpenKE && git checkout master && sh make.sh
 
