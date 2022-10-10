@@ -13,7 +13,7 @@ COPY requirements.txt /multivac/requirements.txt
 WORKDIR /multivac
 
 # set up bdist_wheel
-RUN pip3 install wheel --no-cache-dir
+RUN pip3 install --upgrade pip && pip3 install wheel --no-cache-dir
 
 RUN pip3 install setuptools --no-cache-dir
 
