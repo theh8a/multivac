@@ -1,5 +1,5 @@
 # use ubuntu as the base image; install R and Python on top
-FROM ubuntu:focal
+FROM ubuntu:bionic
 
 # avoid humna input for geography and stuff
 ENV DEBIAN_FRONTEND=noninteractive
@@ -18,7 +18,7 @@ RUN pip3 install wheel --no-cache-dir
 RUN pip3 install setuptools --no-cache-dir
 
 # env setup
-RUN pip3 install torch==1.4.0 --no-cache-dir
+RUN pip3 install torch==1.2.0 --no-cache-dir
 RUN pip3 install -r requirements.txt --no-cache-dir
 
 RUN git clone https://github.com/thunlp/OpenKE && cd OpenKE && git checkout master && sh make.sh
